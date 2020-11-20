@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_apps/Signup.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 Future<void> main() async {
@@ -133,7 +134,6 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-
             FlatButton(
               color: Colors.greenAccent,
               splashColor: Colors.red,
@@ -204,7 +204,16 @@ class _NewpageState extends State<Newpage> {
                   Navigator.push(context,
                       (MaterialPageRoute(builder: (context) => MyApp())));
                 },
-                child: Text("LOGOUT"))
+                child: Text("LOGOUT")),
+            FlatButton(
+                color: Colors.blueGrey,
+                splashColor: Colors.red,
+                textColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(context,
+                      (MaterialPageRoute(builder: (context) => Signup())));
+                },
+                child: Text("SIGN UP PAGE"))
           ],
         ),
       ),
